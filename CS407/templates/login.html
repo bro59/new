@@ -1,0 +1,44 @@
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title> Credential form </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+    </head>
+<body>
+<br><br><br><br><br><br><br><br>
+
+    <div class="form-container">
+
+
+<form method="post" action="/afterLogin" style="height: 200px;">   
+    
+
+    
+    
+          <fieldset> <!--  
+The <fieldset> </fieldset> (making div bigger) tag draws a box around related fields.-->
+      <legend>LOGIN</legend>
+
+      
+    <p><label for="username">Username: </label> <!--small text area with
+      length limit -->
+	<input type="text" name="username" id = "username" size="20" maxlength="40" ></p>
+
+
+  <p><label for="Email">Email: </label> 
+  <input type="Email" id="Email" name="Email"> </p><br><br>
+  
+    </fieldset> 
+
+
+  <input type="submit" name="submit" value="Login"> 
+
+</form>
+
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title> Credential form </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+    </head>
+<body>
+
+
+
+
+     <div class="header1">
+
+    <ul style="size: 25cm;">
+      
+  <li style="size: 4cm; padding: 10px;">
+    
+<form method="post" action="/create1">   
+
+  <h1><input type="submit" name="submit" value="Upload File" style="background-color: #333333;  color: white; size: 25mm;"></h1> 
+
+</form>
+
+
+</li>
+
+    <li style="size: 4cm; padding: 10px;">
+    
+<form method="post" action="/CreateSet">   
+
+  <h1><input type="submit" name="CreateSet" value="CreateSet" style="background-color: #333333;  color: white; size: 25mm;"></h1> 
+
+</form>
+  <li><a href="news.asp">News</a></li>
+  <li><a href="contact.asp">Contact</a></li>
+
+    <li style="size: 4cm; padding: 10px;">
+    
+<form method="post" action="/logout">   
+
+  <h1><input type="submit" name="submit" value="Log Out" style="background-color: #333333;  color: white; size: 25mm;"></h1> 
+
+</form>
+
+
+</li>
+
+</ul>
+  </div>
+    <br><br>
+
+    
+
+    <div class="form-container">
+
+
+<form method="post" action="/afterCreateSet">
+
+    
+    
+          <fieldset> <!--  
+The <fieldset> </fieldset> tag draws a box around related fields.-->
+      <legend>Text Set Creation</legend>
+
+    <p><label for="CreateSet" style="border: 5cm;">Please Enter A Set name: </label> <!--small text area with length limit -->
+        
+	<input type="text" name="CreateSet" id = "CreateSet" size="20" maxlength="40" ></p>
+
+    </fieldset> 
+
+
+  <input type="submit" name="submit" value="Register"> 
+
+</form>
+
+    </div>
+
+</body>
+</html>

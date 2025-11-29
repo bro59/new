@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Success</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+</head>
+<body>
+
+   <div class="header1">
+
+    <ul style="size: 25cm;">
+      
+  <li style="size: 4cm; padding: 10px;">
+    
+<form method="post" action="/create1">   
+
+  <h1><input type="submit" name="submit" value="Upload File" style="background-color: #333333;  color: white; size: 25mm;"></h1> 
+
+</form>
+
+
+</li>
+
+    <li style="size: 4cm; padding: 10px;">
+    
+<form method="post" action="/CreateSet">   
+
+  <h1><input type="submit" name="CreateSet" value="CreateSet" style="background-color: #333333;  color: white; size: 25mm;"></h1> 
+
+</form>
+
+  <li style="size: 4cm; padding: 10px;">
+    
+<form method="post" action="/logout">   
+
+  <h1><input type="submit" name="submit" value="Log Out" style="background-color: #333333;  color: white; size: 25mm;"></h1> 
+
+</form>
+
+
+</li>
+
+</ul>
+  </div>
+
+    <br>
+
+  
+  <h1>Registration Successful!</h1>
+    
+    <p>Thank you for registering, {{ name }}!</p><br>
+
+        <br><br><br><br>
+
+    <p>Here are the contents you uploaded, {{ file_contents }}</p>
+
+  <!---  <p>We sent a confirmation email to: {{ email }}</p>  -->
+  
+<!--    <a href="/">Go Home</a> -->
+</body>
+</html>

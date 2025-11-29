@@ -1,0 +1,93 @@
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title> Credential form </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+    </head>
+<body>
+
+      <div class="header">
+
+    <ul style="size: 25cm;">
+      
+  <li style="size: 4cm; padding: 10px;">
+    
+<form method="post" action="/create1">   
+
+  <h1><input type="submit" name="submit" value="Upload File" style="background-color: #333333;  color: white; size: 25mm;"></h1> 
+
+</form>
+
+
+</li>
+
+    <li style="size: 4cm; padding: 10px;">
+    
+<form method="post" action="/CreateSet">   
+
+  <h1><input type="submit" name="CreateSet" value="CreateSet" style="background-color: #333333;  color: white; size: 25mm;"></h1> 
+
+</form>
+
+    <li style="size: 4cm; padding: 10px;">
+    
+<form method="post" action="/logout">   
+
+  <h1><input type="submit" name="submit" value="Log Out" style="background-color: #333333;  color: white; size: 25mm;"></h1> 
+
+</form>
+
+
+</li>
+
+</ul>
+  </div>
+    <br><br><br>
+
+        <form method="POST", action="/select_option">
+        <label for="dropdown_menu" style="color: aqua;">Choose a text set:</label>
+        <select name="dropdown_menu" id="dropdown_menu">
+            {% for option in set_names %}
+                <option value="{{ option }}" {% if option == selected_set %}selected{% endif %}>{{ option }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <br><br><br>
+
+
+    <h1 style="color: yellowgreen;">Welcome, {{ name }}!</h1>
+
+    <div class="form-container">
+
+<form method="post" action="/fileUpload" enctype="multipart/form-data">
+    <fieldset>  
+      <legend>Uploading files</legend>
+
+  <p><label for="input_file">Please select a file format(CSV, TXT and more): </label> 
+  <input type="file" id="input_file" name="input_file" accept=".CSV, .TXT, text/plain"> </p><br><br>
+
+    <p><label for="window_size">Window Size: </label> 
+	<input type="text" name="window_size" id = "window_size" size="20" maxlength="40" ></p>
+
+      <p><label for="step_size">Step Size: </label>
+
+	<input type="text" name="step_size" id = "step_size" size="20" maxlength="40" ></p>
+
+
+    </fieldset> 
+
+
+  <input type="submit" name="submit" value="Upload File"> 
+
+</form>
+
+
+    </div>
+
+</body>
+</html>

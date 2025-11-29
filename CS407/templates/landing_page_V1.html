@@ -1,0 +1,47 @@
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title> Credential form </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+    </head>
+<body>
+
+    <div class="form-container">
+
+
+<form method="post" action="/register">
+
+    
+    
+          <fieldset> <!--  
+The <fieldset> </fieldset> tag draws a box around related fields.-->
+      <legend>Registration</legend>
+
+  <p><label for="username">Username: </label> 
+  <input type="text" id="username" name="username"> </p><br>
+
+    <p><label for="email">Email: </label> <!--small text area with length limit -->
+        
+	<input type="text" name="email" id = "email" size="20" maxlength="40" ></p>
+
+    </fieldset> 
+
+
+  <input type="submit" name="submit" value="Register"> 
+
+</form><br><br>
+
+    <form method="post" action="/login">
+
+      <input type="submit" name="submit" value="Login"> 
+    
+
+</form>
+
+
+    </div>
+
+</body>
+</html>
